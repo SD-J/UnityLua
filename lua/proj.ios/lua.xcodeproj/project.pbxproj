@@ -37,7 +37,6 @@
 		44FBC55D198633EF00965453 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = 44FBC53B198633EF00965453 /* lundump.c */; };
 		44FBC55E198633EF00965453 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 44FBC53D198633EF00965453 /* lvm.c */; };
 		44FBC55F198633EF00965453 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 44FBC53F198633EF00965453 /* lzio.c */; };
-		44FBC5621986346100965453 /* libc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FBC5611986346100965453 /* libc.dylib */; };
 		8716B7DE1A88AC1900419D68 /* lbitlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 8716B7DA1A88AC1900419D68 /* lbitlib.c */; };
 		8716B7DF1A88AC1900419D68 /* lcorolib.c in Sources */ = {isa = PBXBuildFile; fileRef = 8716B7DB1A88AC1900419D68 /* lcorolib.c */; };
 		8716B7E01A88AC1900419D68 /* lctype.c in Sources */ = {isa = PBXBuildFile; fileRef = 8716B7DC1A88AC1900419D68 /* lctype.c */; };
@@ -111,7 +110,6 @@
 		44FBC53E198633EF00965453 /* lvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lvm.h; path = ../src/lvm.h; sourceTree = "<group>"; };
 		44FBC53F198633EF00965453 /* lzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lzio.c; path = ../src/lzio.c; sourceTree = "<group>"; };
 		44FBC540198633EF00965453 /* lzio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lzio.h; path = ../src/lzio.h; sourceTree = "<group>"; };
-		44FBC5611986346100965453 /* libc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libc.dylib; path = usr/lib/libc.dylib; sourceTree = SDKROOT; };
 		8716B7D91A88AC1900419D68 /* lctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lctype.h; path = ../src/lctype.h; sourceTree = "<group>"; };
 		8716B7DA1A88AC1900419D68 /* lbitlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lbitlib.c; path = ../src/lbitlib.c; sourceTree = "<group>"; };
 		8716B7DB1A88AC1900419D68 /* lcorolib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lcorolib.c; path = ../src/lcorolib.c; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44FBC5621986346100965453 /* libc.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +148,6 @@
 		44B6889A19862F7C005FAD4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				44FBC5611986346100965453 /* libc.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -347,6 +343,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -382,6 +379,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
